@@ -12,13 +12,13 @@ function validerMotDePasse($motDePasse) {
     // Appliquer la fonction sha1 au "salt"
     $saltHash = sha1($salt);
 
-    // Concaténer le "salt" hashé au mot de passe
+    // Concaténer le "salt" avec le mot de passe
     $motDePasseConcatene = $motDePasse . $saltHash;
 
     // Chiffrer le mot de passe concaténé
     $motDePasseChiffre = password_hash($motDePasseConcatene, PASSWORD_BCRYPT);
 
-    // Simulation : Vous devrez stocker le mot de passe chiffré dans une base de données
+    
 
     // Message de confirmation
     $message = "Mot de passe enregistré avec succès !<br>";
